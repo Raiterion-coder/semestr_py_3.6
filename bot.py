@@ -83,12 +83,14 @@ async def kinopoisk_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     return KINOPOISK
 
+
 async def handle_kinopoisk(update: Update, context: ContextTypes.DEFAULT_TYPE):
     title = update.message.text
     response = scrape_kinopoisk(title)
     await update.message.reply_text(response, reply_markup=reply_markup)
     log_interaction(update, response)
     return ConversationHandler.END
+
 
 # Топ фильмов
 async def topfilms_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -122,7 +124,6 @@ async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
     response = get_random_quote()
     await update.message.reply_text(response, reply_markup=reply_markup)
     log_interaction(update, response)
-
 
 
 # Создание приложения и добавление обработчиков

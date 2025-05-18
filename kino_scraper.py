@@ -61,4 +61,4 @@ def scrape_kinopoisk(title):
         return f"🎬 {name}\n⭐ Рейтинг: {rating}\n🔗 {link}"
 
     except Exception as e:
-        return f"Ошибка скрапинга: {str(e)}"
+        return f"❌ Ошибка скрапинга: {str(e)}"

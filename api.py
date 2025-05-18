@@ -70,9 +70,6 @@ def get_rating(title):
             star_str = "★" * stars + "☆" * (5 - stars)
             ratings_lines.append(f"⭐Metacritic: {star_str} ({value})")
 
-        else:
-            ratings_lines.append(f"{source}: {value}")
-
     return "\n".join(ratings_lines)
 
 
