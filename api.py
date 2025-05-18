@@ -36,7 +36,7 @@ def get_rating(title):
 
     data = r.json()
 
-    if data.get("Response") == "False":
+    if data.get("Response") == "False": #Проверка найден ли фильм
         return None
 
     ratings_list = data.get("Ratings", [])  # Список рейтингов из разных источников
