@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 # Функция для получения информации на сайте film.ru
-def get_top_films(year: int, top_n: int = 5) -> str:
+def get_top_films(year, top_n = 5):
     url = f"https://www.film.ru/a-z/movies/{year}"
     headers = {"User-Agent": "Mozilla/5.0"}
 
